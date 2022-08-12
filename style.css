@@ -83,27 +83,10 @@ ul a:hover {
     left: -2000px;
     transition: .5s;
 }
-.menu-umobile li{
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    border-bottom: 1px solid black;
-}
 .menu-mobile li a{
     text-decoration: none;
     color: white;
-    font-family: arial ;
-}
-.menu-mobile li a:hover {
-    text-decoration: none;
     font-family: arial;
-}
-
-#carrosel{
-    width: 99.8%;
-    overflow: hidden;
-    margin-left:2px;
 }
 #carrosel .galery{
     width: 500%;
@@ -114,6 +97,28 @@ ul a:hover {
 }
 #carrosel .galery img{
     width: 20%;
+}
+#carrosel {
+    width: 99.8%;
+    overflow: hidden;
+    margin-left: 2px;
+}
+#carrosel-mobile .galery-mobile {
+    display: none;
+    width: 500%;
+    margin-top: 65px;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+#carrosel-mobile .galey img {
+    width: 100vw;
+    height: 300px;
+}
+#carrosel-mobile {
+    width: 100%;
+    overflow: hidden;
+    margin-left: 5px;
 }
 #cards{
     display:flex;
@@ -133,7 +138,6 @@ ul a:hover {
 #cards img:hover {
    height: 360px;
     width: 360px;
-    
 }
 .container-quem-somos {
     display: flex;
@@ -164,9 +168,10 @@ ul a:hover {
 }
 .container-projetos {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: center;
-    width: 90%;
+    width: 100%;
+    height: 400px;
     position: static;
     margin: auto;
     margin-top: 20px;
@@ -174,8 +179,7 @@ ul a:hover {
     gap: 30px;
 }
 #projetos h2 {
-    width: 30%;
-    font-size: 32px;
+    font-size: 30px;
     color:#042b60;
     display: flex;
 }
@@ -183,12 +187,29 @@ ul a:hover {
     width: 50%;
     display: flex;
 }
-#projetos img {
-    width: 300px;
-    height: 150px;
-    border-radius:5%; 
+#projetos img{
+    width: 1200px;
+    height: 300px;
     display: flex;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#projetos img:hover {
+    width: 1320px;
+    height: 330px;
+}
+#projetos #projeto-mobile img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: none;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+}
+#projetos #projeto-mobile img:hover {
+    width: 350px;
+    height: 350px;
 }
 #produtos {
     font-size: 32px;
@@ -295,8 +316,6 @@ legend {
 }
 #submit:hover {
     background-color: rgb(85, 92, 156);
-    
-
 }
 .midias-sociais{
     width: 30%;
@@ -339,11 +358,7 @@ legend {
     font-size: 15px;
     margin-left: 40%;
     margin-top: -20px;
-
-} 
-
-
-
+}
 
 
 @media (max-width:768px){
@@ -356,9 +371,8 @@ legend {
     }
     .menu-mobile ul a{
         text-align: center;
-        display: block;
-        
-    }
+        display: block;        
+    }    
     .menu-mobile{
         display: block;
         position: fixed;
@@ -378,11 +392,21 @@ legend {
     #check:checked ~ ul{
         left: 1px;
         transition: .5s;
+    } 
+    #carrosel {
+        display: none;
+    }
+    #carrosel-mobile .galery-mobile {
+        display: block;
+    }
+    #carrosel-mobile img {
+        width: 100vw;
+        height: 300px;
     }
     #cards img {
         width: 100%;
         align-items: center;
-        
+        margin-top: 10px;
     }
     #cards {
         width: 100%;
@@ -391,34 +415,40 @@ legend {
         align-items: center;
         gap: 30px;
         position: static;
-        margin-top: 5px;
+        margin-top: 10px;
         margin: auto;
     }
     .container-quem-somos {
        flex-direction: column;
+       ext-align: center;
+       
     }
     #quem-somos img {
         width: 100%;
     }
     #quem-somos h2 {
-        width: 65%;
+        width: 62%;
+        align-items: center;
     }
     #quem-somos p {
         width: 100%;
         margin-top: 10px;
         margin-bottom: 10px;
+        text-align: center;
     }
     .container-projetos {
         flex-direction: column;
     }
-    #projetos img {
-        width: 100%;
+    #projetos #projeto-web img {
+        display: none;
+    }
+    #projetos #projeto-mobile img {
+        display: block;
+        margin-top: -40px;
     }
     #projetos h2 {
-        width: 75%;
-    }
-    #projetos p {
-       width: 100%;
+        font-size: 30px;
+        text-align: center;
     }
     .banners {
         gap: 30px;
@@ -433,16 +463,13 @@ legend {
     .box {
         display: none;
         width: 350px;
-        
     } 
     fieldset {
         width: 350px;
-                          
     } 
     .labelInput {
         font-size: 10px;
-    } 
-     
+    }      
     legend {
         font-size: 10px;
     }
