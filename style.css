@@ -262,7 +262,7 @@ footer {
     width: 400px;
     height: 210px;
 }
-fieldset {
+.form {
     width: 400px;
     border: 2px solid white;
     border-radius: 5px;
@@ -270,11 +270,15 @@ fieldset {
 }
 legend {
     border: 1px solid white;
+    width: 70%;
+    margin-left: 50px;
+    margin-top: -15px;
     border-radius: 5px;
     padding: 8px;
     text-align: center;
     font-size: 15px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    background-color: #042b60;
 }
 .inputBox {
    position: relative;
@@ -359,7 +363,7 @@ legend {
     margin-left: 40%;
     margin-top: -20px;
 }
-
+    
 
 @media (max-width:768px){
     .menu{
@@ -420,9 +424,7 @@ legend {
     }
     .container-quem-somos {
        flex-direction: column;
-       ext-align: center;
-       
-    }
+        }
     #quem-somos img {
         width: 100%;
     }
@@ -459,20 +461,10 @@ legend {
         display: flex;
         flex-direction: column;
         align-items: center;        
-    }    
+    }  
     .box {
         display: none;
-        width: 350px;
     } 
-    fieldset {
-        width: 350px;
-    } 
-    .labelInput {
-        font-size: 10px;
-    }      
-    legend {
-        font-size: 10px;
-    }
     .info {
         font-size: 10px;
         margin-top: 10px;

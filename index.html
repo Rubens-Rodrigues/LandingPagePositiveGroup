@@ -37,7 +37,7 @@
                     <input type="checkbox" id="check">
                     <ul>
                         <li><a href="#quem-somos">Quem somos</a></li>
-                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#projetos">Diagnóstico grátis</a></li>
                         <li><a href="#produtos">Produtos</a></li>
                         <li><a href="#contatos">Contatos</a></li>
                     </ul>
@@ -120,7 +120,7 @@
         </div>
         <footer class="rodape" id="contatos">
             <div class="box">
-                <fieldset>
+                <Form class="form"action="./contact.php" method="POST">
                     <legend><b>Entraremos em contato em até 48h</b></legend>
                     <br>
                     <div class="inputBox">
@@ -135,16 +135,16 @@
                     <br>
                     <div class="inputBox">
                         <input type="text" name="email" id="email" class="inputUser" required>
-                        <label for="email" class="labelInput">Digite seu email</label>
+                    <label for="email" class="labelInput">Digite um email válido</label>
                     </div>
                     <br>
                     <div class="inputBox">
                         <input type="text" name="mensagem" id="mensagem" class="inputUser" required>
-                        <label for="mensagem" class="labelInput">Deixe sua mensagem</label>
+                    <label for="mensagem" class="labelInput">Deixe sua mensagem</label>
                     </div>
                     <br>
                     <input type="submit" name="submit" id="submit">
-                </fieldset>
+                </form>
             </div>
             <img id="logo-footer" src="img/logo.jpeg">
             <div class="info"> Junte-se as mais de 200 empresas atendidas pela Positive Group</div>
