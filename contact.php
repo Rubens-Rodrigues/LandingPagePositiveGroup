@@ -11,11 +11,10 @@
         <p><b>Telefone: </b>$telefone</p>
         <p><b>E-mail: </b>$email</p>
         <p><b>Mensagem: </b>$mensagem</p>
-        <p>Este e-mail foi enviado em <b>$data_envio</b></p>
     </html>
     ";
 
-    $destino = "anapbacelar@gmail.com";
+    $destino = "contato@positiveempresarial.com.br";
     $assunto = "Contato pelo Site";
 
     $headers = "MIME-Version: 1.0\n";
@@ -24,6 +23,6 @@
 
     mail($destino, $assunto, $arquivo, $headers);
 
-    echo "<meta http-equiv='refresh' content='10;url=../index.html'>";
+    echo "<meta http-equiv='refresh' content='10;url=../contato.html'>";
 
 ?>
