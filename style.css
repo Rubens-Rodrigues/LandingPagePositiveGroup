@@ -386,6 +386,23 @@ legend {
     font-size: 15px;
     margin-top: 15px;
 }
+#conhecer {
+    width: 80%;
+    text-decoration: none;
+    color: white;
+    background-color: #3db5c2;
+    border-radius: 10px;
+    padding: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+}
+#conhecer:hover {
+    color: #3db5c2;
+    background-color: white;
+}
 
 @media (max-width:768px){
     .menu{
